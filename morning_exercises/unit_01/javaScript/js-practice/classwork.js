@@ -9,15 +9,15 @@
 // by assigning the appropriate variable a value of either `true` or `false`.
 
 // 1. true || false 
-var resOne;
+var resOne = true;
 // Replace This Comment With Your Code
 
 // 2. null || ''
-var resTwo;
+var resTwo = false;
 // Replace This Comment With Your Code
 
 // 3. 'false' && true
-var resThree;
+var resThree = true;
 // Replace This Comment With Your Code
 
 // 4. !!0
