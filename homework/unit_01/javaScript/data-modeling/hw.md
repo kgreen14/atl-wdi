@@ -62,9 +62,48 @@ keep them organized.
 
 > Answer here
 
+var task1 = {
+  name: "do homework",
+  startTime: "5:15",
+  endTime: "Not Complete",
+};
+
+The property "name" is appropriate so someone knows what the task is, "startTime" makes sense as to when the task was started and "endTime" tells you if the task is complete and when it was complete.
+
+var project1 = {
+  projectName: "WDI Homework",
+  description: "All homework assigned during WDI11",
+  setOfTasks: [task1, task2, task3]
+};
+
+The "setOfTasks" array stores my tasks to organize them into a group of related tasks and the information of each task is retrievable.
+
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
+
+var account = {
+  userName = "Kgreen",
+  dateOfBirth = "01/04/1985",
+  biography = "blah blah blah",
+};
+Accounts in apps should have a userName, dateOfBirth, and biography because they give you information on who the user is.
+
+var album = {
+  var album = {
+  name: "Fourth Of July",
+  description: "Centennial Park Indepence Day Celebration",
+  setOfPics: ["fireworks1.jpg", "fireworks2.jpg", "fireworks3.jpg"]
+};
+An album normally has a name, and description to give you information on the album and it will contain pictures so "seOfPics" seems appropriate as a property of an album.
+
+var photo = {
+  name: "fireworks"
+  comment: "merica"
+  url: "pics/fireworks1.jpg"
+};
+Photos taken and stored on a computer or website/app will usually have a name to describe the photo, and allow you to comment below so you can say something about the photo. All pictures/images will have a url so you can locate and link to the picture/image, so that is an appropriate property.
+
 
 > Answer here
 
@@ -75,6 +114,20 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
+var light = {
+  brightness: "low",
+  location: "Kitchen",
+  name: "kitchen led",
+};
+Brightness tells you the setting of the light. Location tells you where in the house you can find the light. Name tells you what the light is called with some detail about it.
+
+var home {
+  temperature: 72,
+  allLigtsInHouse: ["kitchen", "living room", "master bedroom", "master bathroom"]
+};
+
+The temperture of a house is an important thing to track and display so it is appropriate to have a temperature property in the home object. The allLightsInHouse array is nice to be able to track what lights are in the house and be able to pull information on each light.
+
 > Answer here
 
 ### 4. Sneaker Store
@@ -82,6 +135,27 @@ and down.
 This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
+
+var product {
+  name: "Air Jordan",
+  description: "The original Air Jordan shoe",
+  price: $399,
+};
+These are great properties because all items I've bought online have a name so you know what you're buying, a description so you know detailed information about the product, and how much it cost.
+
+var orderItem {
+  product: "null"
+  quantity: 0,
+};
+Under orderItem it is a good idea to know how many of a product are being ordered incase someone wants more than 1 of that item. This way the cart knows how to calculate the cost and determine how many are being ordered.
+
+var order {
+  orderItems: [],
+  orderStatus: "No items in cart."
+  orderCompleteDate: "Incomplete"
+}
+In a cart (order), you can have multiple items being ordered at the same time. It is sensible to know the status of the order, and when it was completed incase of a returned item situation.
+
 
 > Answer here
 
@@ -138,6 +212,8 @@ var exampleLine = {
 ```
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
+1. Disadvantate: Nothing is stored about the locations so the app doesn't know the distance between stops.
+2. You can easily add more stops on the exampleLine's list of stops and they have details about them because they are objects.
 
 > Answer here
 
@@ -242,6 +318,7 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
+Example 1 is better suited for a Doctor to easily see all their appointments. Example 2 is better suited for a receptionist to see all appointments without having to dig into each doctor.
 > Answer here
 
 ## Tying It Together
@@ -253,13 +330,35 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
+    player
+    game
+    que
+
   > Answer here
 
 b.  How might those entities be represented in JavaScript code?
 
+    Player = {
+      username:
+      profilePicture:
+      rating:
+    };
+    game = {
+      playerX:
+      playerO:
+      whoWon:
+    };
+    que = {
+      waitList = ["user1", "user2", "user3"]
+    };
   > Answer here
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
+
+    A. Tracking a player, the game, and a queue are probably some of the most barebones things you would want to track with any game, otherwise you can't really make a game that is playable by multiple people.
+    B. I think most of the games I have played, have always had a username, profile picture, and your rating to pair you up with the right opponenets. This is all pretty common sense.
+
+
 
   > Answer here

@@ -21,30 +21,46 @@ var resThree = true;
 // Replace This Comment With Your Code
 
 // 4. !!0
-var resFour;
+var resFour = false;
 // Replace This Comment With Your Code
 
 // 5. !null && !undefined
-var resFive;
+var resFive = true;
 // Replace This Comment With Your Code
 
 /// Flow Control ///
 
 // 6. Write a `while` loop that increases `resSix` by 23 until `resSix` is five
 //    digits long. (Hint: take a look at the .toString() method)
-var resSix;
+var resSix = 0; {
+	while (resSix.toString().length < 5) {
+		resSix += 23
+	}
+}
 // Replace This Comment With Your Code
 
 // 7. Write a `while` loop that increases `resSeven` by 12 when it's strictly
 //    below 95, decreases it by 7 when it's strictly above 105, and stops as
 //    soon as `resSeven` equals or falls between those two values.
-var resSeven;
+var resSeven = 50; {
+	while (resSeven > 105 || resSeven < 95) {
+		if (resSeven > 105 ) {
+			resSeven -= 7;
+		} else (resSeven < 95) {
+			resSeven += 12;
+		}
+	}
+
 // Replace This Comment With Your Code
 
 // 8. Write a `for` loop that counts from 0 (inclusive) to 1857 (exclusive) and
 //    calculates the sum of all of those numbers, storing the result in the
 //    variable `resEight`.
 var resEight;
+resEight = 0;
+for (var i = 0; i < 1857; i++) {
+	resEight += i;
+}
 // Replace This Comment With Your Code
 
 // 9. Using a `for` loop, calculate the sum of all multiples of 7 between 0
