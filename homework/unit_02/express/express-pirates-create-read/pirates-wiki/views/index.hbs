@@ -1,0 +1,12 @@
+<h1>{{numberOfPirates}} Famous Pirates</h1>
+<ul>
+    {{#each pirates}}
+        <li class = 'pirateNames'>
+            <a href='http://localhost:3000/pirates/{{@index}}'>{{name}}</a><a href = "/pirates/{{@index}}/edit">
+            
+           
+         
+        </li>
+    {{/each}}
+</ul>
+<h4><a href='http://localhost:3000/pirates/new'>Create A New Pirate</a></h4>
