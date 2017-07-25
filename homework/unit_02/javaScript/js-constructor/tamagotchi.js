@@ -7,17 +7,27 @@ class Tamagotchi{
     this.creatureType = creatureType;
   }
 
-  cry(){
+  cry() {
     this.foodInTummy--;
-    console.log("The Tamagotchi is crying!!! WAAAH!!!!!!");
-    console.log('current food in tummy: ' + this.foodInTummy);
+    console.log("WAAAH!!!!!!");
     console.log(this.name + ' has current food in tummy = ' + this.foodInTummy);
-  }
+  };
+  puke() {
+    this.health--;
+    console.log('Bleeeeh! Sick!!!!!!');
+    console.log(this.name + ' has current health = ' + this.health);
+  };
+  yawn(){
+    this.restedness--;
+    console.log('Yaaaawwwwn! So tired');
+    console.log(this.name + ' has current restedness = ' + this.restedness);
+  };
 }
 
 
-var bob = new Tamagotchi('bob', 'fish');
-var tom = new Tamagotchi('tom', 'cat');
+
+var bob = new Tamagotchi('bob');
+var tom = new Tamagotchi('tom');
 
 
 console.log(bob);
@@ -26,3 +36,7 @@ console.log(tom);
 
 bob.cry();
 tom.cry();
+bob.puke();
+tom.puke();
+bob.yawn();
+tom.yawn();
