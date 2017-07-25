@@ -22,7 +22,26 @@ class Tamagotchi{
     console.log('Yaaaawwwwn! So tired');
     console.log(this.name + ' has current restedness = ' + this.restedness);
   };
-}
+start(){
+    console.log("Starting " + this.name);
+    var self = this;
+    this.hungerTimer = setInterval(function() {
+      self.cry();
+    }, 6000);
+    this.yawnTimer = setInterval(function() {
+      self.yawn();
+    }, 10000);
+    this.sickTimer = setInterval(function() {
+      self.puke();
+    }, 25000);
+  };
+  stop(){
+    console.log("Stopping " + this.name);
+    clearInterval(this.hungerTimer);
+    clearInterval(this.yawnTimer);
+    clearInterval(this.sickTimer);
+  };
+} 
 
 
 
@@ -34,9 +53,6 @@ console.log(bob);
 console.log(tom);
 
 
-bob.cry();
-tom.cry();
-bob.puke();
-tom.puke();
-bob.yawn();
-tom.yawn();
+bob.start();
+tom.start();
+
