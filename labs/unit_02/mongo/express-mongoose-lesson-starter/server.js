@@ -7,8 +7,13 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.set('view engine', 'hbs');
+
 var usersController = require("./controllers/usersController.js");
 app.use('/users', usersController);
+
+const itemsController = require('./controllers/itemsController.js')
+app.use('/users/:id/items', itemController);
 
 // Mongoose stuff
 var mongoose = require('mongoose');
